@@ -19,8 +19,8 @@ public class ArraySet<E extends Comparable<E>> implements OrderedSet {
             return false;
         }
     }
-
-    public Comparable<E> min() {
+    // Метод возвращает наименьший элемент
+    public E min() {
         E minElem = elements.get(0);
 
         for (E element : elements) {
@@ -31,8 +31,8 @@ public class ArraySet<E extends Comparable<E>> implements OrderedSet {
 
         return minElem;
     }
-
-    public Comparable<E> max() {
+    // Метод возвращает наибольший элемент
+    public E max() {
         E maxElem = elements.get(0);
 
         for (E element : elements) {

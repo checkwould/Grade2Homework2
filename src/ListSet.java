@@ -3,6 +3,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 public class ListSet<E extends Comparable<E>> implements OrderedSet {
+
     LinkedList<E> elements;
 
     public ListSet(E[] elements) {
@@ -19,8 +20,8 @@ public class ListSet<E extends Comparable<E>> implements OrderedSet {
             return false;
         }
     }
-
-    public Comparable<E> min() {
+    // Метод возвращает наименьший элемент.
+    public E min() {
         E minElem = elements.getFirst();
         for (E element : elements) {
             if (minElem.compareTo(element) > 0) {
@@ -29,8 +30,8 @@ public class ListSet<E extends Comparable<E>> implements OrderedSet {
         }
         return minElem;
     }
-
-    public Comparable<E> max() {
+    // Метод возвращает наибольший элемент
+    public E max() {
         E maxElem = elements.getFirst();
 
         for (E element : elements) {
